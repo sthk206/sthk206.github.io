@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Si Thu Kaung Set's Website</title>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172046374-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172046374-1');
+    </script>
+    <script src='./main.js'></script>
+
     <style>
 
         @font-face {
@@ -43,10 +54,10 @@
             text-align: center;
         }
         :root{
-            --about-color: #F0FFF7;
+            /* --about-color: #F0FFF7;
             --experiences-color: #F0FAFF;
             --volunteer-color: #FAF0F8;
-            --contact-color: #F7F0FF;
+            --contact-color: #F7F0FF; */
         }
 
 
@@ -78,6 +89,8 @@
             display: block;
             margin-top: auto;
             margin-bottom: auto;
+            padding : 30px;
+            line-height: 2.5;
         }
         .sans-font{
             font-family: OpenSans, Arial, Helvetica;
@@ -108,12 +121,11 @@
             text-shadow: 2px 2px 5px black;
             
         }
-
-        @keyframes bigger{
-            0% {text-transform: capitalize;}
-            50%{text-align: center;}
-            100%{text;}
+        .intro{
+            line-height: 2;
         }
+
+
 
         em#myname{
             color:rgb(51, 172, 51);
@@ -165,7 +177,7 @@
                 margin-right: 160px;
             }
             .sidebar {
-                line-height: 15vh;
+                line-height: 17vh;
                 height: 100%;
                 width: 160px;
                 position: fixed;
@@ -246,7 +258,6 @@
                 <li><a class="hover-bg" href="#experiences-section">Experiences</a></li>
                 <li><a class="hover-bg" href="#volunteer-section">Volunteer</a></li>
                 <li><a class="hover-bg" href="#contact-section">Contact Me</a></li>
-                <li><a class="hover-bg" href="/Experiments/index.html">Experiment</a></li>
                 <!-- iCon by oNlineWebFonts.Com -->
                 <li><a class="hover-toggle topstyle" href="#top"><img height="80" width="80" src="./images/arrow.png" alt="Top of Page"></a></li>
                 <!-- <li><button onclick="location.href='#top'">Back to Top</button></li> -->
@@ -292,8 +303,8 @@
     
                 </section>
      
-                <p class="center-horizontal" style="width: 300px;">
-                    Nobis atque temporibus placeat non omnis. Eligendi voluptatibus et possimus voluptatum autem qui. Ut tempore distinctio labore reiciendis et nihil doloribus tenetur. Nobis atque temporibus placeat non omnis. Eligendi voluptatibus et possimus voluptatum autem qui. Ut tempore distinctio labore reiciendis et nihil doloribus tenetur.
+                <p class="center-horizontal intro" style="width: 300px;">
+                    My name's Si Thu Kaung Set. I was born in Yangon, Myanmar. Currently, I'm a second year computer-science major at UCSD. 
                 </p>
     
                 <section>
@@ -313,7 +324,7 @@
                             <td>CSS</td>
                         </tr>
                         <tr>
-                            <td>Pytdon</td>
+                            <td>Python</td>
                             <td>PHP</td>
                         </tr>
                         <tr>
@@ -364,25 +375,25 @@
         <section  id=volunteer-section>
             <h1 class="main-header" id="volunteer">I Love to Volunteer!</h1>
             <section>
-                <h2 class="secondary-header">Bac Ninh Orphanage</h2>
+                <h2 class="secondary-header">Huong La Orphanage</h2>
                 <div class="volunteer-grid">
-                    <img src="/images/fbicon.png" alt="bacninh">
-                    <p class="center-vertical">Accusantium aperiam qui assumenda nobis recusandae dolor. Quod ratione corrupti. Voluptas veritatis ducimus dolorem culpa sunt veniam possimus vel. Sit ut est quia est ut eos cumque enim. Optio ipsum nisi rerum consequuntur qui in quas. Incidunt tempora molestias doloremque unde ipsam omnis praesentium enim et.</p>
+                    <img height="300" width="500" src="/images/bacninh.jpg" alt="bacninh">
+                    <p class="center-vertical">Huong La Orphanage is home to children with disabilities that is underfunded by the government in Bac Ninh province, an hour away from the capital of Vietnam. Alongside my classmates, I had the pleasure of contributing hard labor for renovation of orphanage including new classrooms/dormitories and organizing activities and games for orphans with physical and mental disabilities. It was truly an eyeopening and heartwarming experience for me.</p>
                 </div>
             </section>
             <section>
                 <h2 class="secondary-header">Building Blocks Community Service</h2>
                 <div class="volunteer-grid">
-                    <img src="/images/fbicon.png" alt="buildingblocks">
-                    <p class="center-vertical">Accusantium aperiam qui assumenda nobis recusandae dolor. Quod ratione corrupti. Voluptas veritatis ducimus dolorem culpa sunt veniam possimus vel. Sit ut est quia est ut eos cumque enim. Optio ipsum nisi rerum consequuntur qui in quas. Incidunt tempora molestias doloremque unde ipsam omnis praesentium enim et.</p>
+                    <img height="300" width="500" src="/images/buildingblocks.jpg" alt="buildingblocks">
+                    <p class="center-vertical">Building Blocks Community Service Myanmar is a student-run organization aimed towards helping educational institutions that require volunteer help. As the accountant, I managed and organized funds necessary for and acquired from events sponsored by the organization, and supported the group in its provision of tangible and informational support to educational institutions throughout Myanmar. </p>
                 </div>
             </section>
             <section>
 
                 <h2 class="secondary-header">Help Portrait</h2>
                 <div class="volunteer-grid">
-                    <img src="/images/fbicon.png" alt="helpportrait">
-                    <p class="center-vertical">Accusantium aperiam qui assumenda nobis recusandae dolor. Quod ratione corrupti. Voluptas veritatis ducimus dolorem culpa sunt veniam possimus vel. Sit ut est quia est ut eos cumque enim. Optio ipsum nisi rerum consequuntur qui in quas. Incidunt tempora molestias doloremque unde ipsam omnis praesentium enim et.</p>
+                    <img height="300" width="500" src="/images/helpportrait.jpg" alt="helpportrait">
+                    <p class="center-vertical">Help Portrait is a global movement to give back to the community by offering portraits of individuals and families. I was part of the outreach team that reached out to households in the community to invite them to the event, and I also helped families prepare for their photographs. Help Portrait has been an especially meaningful experience, as many of the families I interacted with could not even afford a family portrait.</p>
                 </div>
             </section>
         </section>
@@ -395,7 +406,16 @@
 
 
             <div class="container">
-                <form action="mailto:sthk206@gmail.com">
+                <p>
+                    Please do reach out to me at <br>
+                    <em>skaungse@ucsd.edu</em>
+                </p>
+                <p>
+                    I'd love to connect with you, too.
+                </p>
+                <a href="https://www.facebook.com"><img width="50" height="50" src="/images/fbicon.png" alt="facebook"></a>
+                <a href="https://www.github.com"><img width="50" height="50" src="/images/ghicon.png" alt="github"></a>
+                <!-- <form action="mailto:sthk206@gmail.com">
                     <label for="name">Name:</label>
                     <input id="name" type="text">
                     <br />
@@ -406,7 +426,7 @@
                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
                     <br>
                     <button type="submit">Send!</button>
-                </form>
+                </form> -->
             </div>
 
         </section>
@@ -414,15 +434,5 @@
     </main>
 
 </body>
-<footer>
-    <div style="text-align: center;">
-        <a href="https://www.facebook.com"><img width="50" height="50" src="/images/fbicon.png" alt="facebook"></a>
-        <a href="https://www.github.com"><img width="50" height="50" src="/images/ghicon.png" alt="github"></a>
-        <template>
-            Thank you, I will be in touch with you soon.
-        </template>
-    </div>
-
-</footer>
 
 </html>
