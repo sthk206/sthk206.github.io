@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Test</title>
+    <style>
+        .grid{
+            width: 50%;
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+        }
+        label{
+            text-align: right;
+        }
+        #outTable td,th{
+            border: 1px solid black;
+        }
+        #outTable{
+            margin-top: 10px;
+            width : 100%;
+            /* visibility:hidden; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Method Test
+        </h1>
+    </header>
+
+    <form id="mainForm" action="#">
+        <input type="hidden" id="id" name="id" value="1">
+        <div class="grid">
+            <label for="name">Article Name</label>
+            <input name="name" type="text">
+
+            <label for="body">Article Body</label>
+            <textarea style="vertical-align: top;" name="body" cols="30" rows="10"></textarea>
+
+        </div>
+        <input id="dateInput" name="date" type="hidden">
+
+        <br>
+        <input id="postBtn" type="button" value="POST">
+        <input id="getBtn" type="button" value="GET">
+        <input id="putBtn" type="button" value="PUT">
+        <input id="deleteBtn" type="button" value="DELETE">
+    </form>
+    <output id="response">
+        <table id="outTable"></table>
+
+    </output>
+
+
+    <script>
+
+        function form_Data () {
+            let data = {};
+            let form = document.getElementById('mainForm');
+
+            for (let el of form.elements) {
+                if (el.getAttribute('type') !== 'button') {
+                    data[el.name] = el.value;
+                }
+            }
+            return data;
+        }
+
+        function postFetch() {
+            document.getElementById('dateInput').setAttribute('value', new Date());
+            let formD = form_Data();
+            fetch('https://httpbin.org/post', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formD)
+            }).then(response => response.json())
+              .then(data => {
+
+                outT = document.getElementById('outTable');
+                outT.innerHTML = '';
+
+                r1 = document.createElement('tr')
+                h1 = document.createElement('th');
+                h1.innerHTML = 'Key';
+                h2 = document.createElement('th');
+                h2.innerHTML = 'Value';
+
+                r1.appendChild(h1);
+                r1.appendChild(h2);
+                outT.appendChild(r1);
+
+                for (key of Object.keys(data)) {
+                    let val = '';
+                    //check if value is string
+                    if(typeof(data[key]) === 'string'){
+                        val = data[key];
+                    }
+                    //else if value is object
+                    else{
+                        if(Object.keys(data[key]).length === 0){
+                            val= 'EMPTY';
+                        }
+                        else{
+                            for(subkey of Object.keys(data[key])){
+                                let string = `${subkey} : ${data[key][subkey]} </br>`
+                                val = val + string;
+                            }
+                        }
+                    }
+                    row = document.createElement('tr');
+                    col1 = document.createElement('td');
+                    col2 = document.createElement('td');
+                    col1.innerHTML = key;
+                    col2.innerHTML = val;
+                    row.appendChild(col1);
+                    row.appendChild(col2);
+                    outT.appendChild(row);
+
+                }
+              })
+        }
+
+
+        function getFetch() {
+            document.getElementById('dateInput').setAttribute('value', new Date());
+            
+            let formD = new FormData(document.getElementById('mainForm'));
+            let qs = (new URLSearchParams(formD)).toString()
+
+            fetch('https://httpbin.org/get?' + qs, {
+                method: 'GET',
+
+            }).then(response => response.json())
+              .then(data => {
+                    outT = document.getElementById('outTable');
+                    outT.innerHTML = '';
+
+                    r1 = document.createElement('tr')
+                    h1 = document.createElement('th');
+                    h1.innerHTML = 'Key';
+                    h2 = document.createElement('th');
+                    h2.innerHTML = 'Value';
+
+                    r1.appendChild(h1);
+                    r1.appendChild(h2);
+                    outT.appendChild(r1);
+
+                    for (key of Object.keys(data)) {
+                        let val = '';
+                        //check if value is string
+                        if(typeof(data[key]) === 'string'){
+                            val = data[key];
+                        }
+                        //else if value is object
+                        else{
+                            if(Object.keys(data[key]).length === 0){
+                                val= 'EMPTY';
+                            }
+                            else{
+                                for(subkey of Object.keys(data[key])){
+                                    let string = `${subkey} : ${data[key][subkey]} </br>`
+                                    val = val + string;
+                                }
+                            }
+                        }
+                        row = document.createElement('tr');
+                        col1 = document.createElement('td');
+                        col2 = document.createElement('td');
+                        col1.innerHTML = key;
+                        col2.innerHTML = val;
+                        row.appendChild(col1);
+                        row.appendChild(col2);
+                        outT.appendChild(row);
+
+                    }
+              })
+        }
+
+        function putFetch() {
+            document.getElementById('dateInput').setAttribute('value', new Date());
+            let formD = form_Data();
+            fetch('https://httpbin.org/put', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formD)
+            }).then(response => response.json())
+              .then(data => {
+
+                outT = document.getElementById('outTable');
+                outT.innerHTML = '';
+
+                r1 = document.createElement('tr')
+                h1 = document.createElement('th');
+                h1.innerHTML = 'Key';
+                h2 = document.createElement('th');
+                h2.innerHTML = 'Value';
+
+                r1.appendChild(h1);
+                r1.appendChild(h2);
+                outT.appendChild(r1);
+
+                for (key of Object.keys(data)) {
+                    let val = '';
+                    //check if value is string
+                    if(typeof(data[key]) === 'string'){
+                        val = data[key];
+                    }
+                    //else if value is object
+                    else{
+                        if(Object.keys(data[key]).length === 0){
+                            val= 'EMPTY';
+                        }
+                        else{
+                            for(subkey of Object.keys(data[key])){
+                                let string = `${subkey} : ${data[key][subkey]} </br>`
+                                val = val + string;
+                            }
+                        }
+                    }
+                    row = document.createElement('tr');
+                    col1 = document.createElement('td');
+                    col2 = document.createElement('td');
+                    col1.innerHTML = key;
+                    col2.innerHTML = val;
+                    row.appendChild(col1);
+                    row.appendChild(col2);
+                    outT.appendChild(row);
+
+                }
+              })
+        }
+        function deleteFetch() {
+            //only need id for delete request
+            let x = document.getElementById('id');
+            let data = {};
+            data[x.name] = x.value;
+            let formD = form_Data();
+            fetch('https://httpbin.org/delete', {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.json())
+              .then(data => {
+
+                outT = document.getElementById('outTable');
+                outT.innerHTML = '';
+
+                r1 = document.createElement('tr')
+                h1 = document.createElement('th');
+                h1.innerHTML = 'Key';
+                h2 = document.createElement('th');
+                h2.innerHTML = 'Value';
+
+                r1.appendChild(h1);
+                r1.appendChild(h2);
+                outT.appendChild(r1);
+
+                for (key of Object.keys(data)) {
+                    let val = '';
+                    //check if value is string
+                    if(typeof(data[key]) === 'string'){
+                        val = data[key];
+                    }
+                    //else if value is object
+                    else{
+                        if(Object.keys(data[key]).length === 0){
+                            val= 'EMPTY';
+                        }
+                        else{
+                            for(subkey of Object.keys(data[key])){
+                                let string = `${subkey} : ${data[key][subkey]} </br>`
+                                val = val + string;
+                            }
+                        }
+                    }
+                    row = document.createElement('tr');
+                    col1 = document.createElement('td');
+                    col2 = document.createElement('td');
+                    col1.innerHTML = key;
+                    col2.innerHTML = val;
+                    row.appendChild(col1);
+                    row.appendChild(col2);
+                    outT.appendChild(row);
+
+                }
+              })
+        }
+        document.getElementById('postBtn').addEventListener('click', postFetch);
+        document.getElementById('getBtn').addEventListener('click', getFetch);
+        document.getElementById('putBtn').addEventListener('click', putFetch);
+        document.getElementById('deleteBtn').addEventListener('click', deleteFetch);
+
+
+    </script>
+
+</body>
+</html>

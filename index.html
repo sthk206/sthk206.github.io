@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Si Thu Kaung Set's Portfolio Website">
     <title>Si Thu Kaung Set's Website</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -14,7 +15,7 @@
 
         gtag('config', 'UA-172046374-1');
     </script>
-    <script src='./main.js'></script>
+    <script src='./main.js' defer></script>
 
     <style>
 
@@ -117,17 +118,25 @@
             80% {opacity: 100%;}
         }
         .hover-bg:hover{
-            color: azure;
-            text-shadow: 2px 2px 5px black;
+
+            /* color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 5px black; */
+            border-right: 7px solid black;
             
         }
         .intro{
             line-height: 2;
         }
 
+        .skills-grid{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+
 
 
         em#myname{
+            font-weight: bold;
             color:rgb(51, 172, 51);
             animation:color-change 2s infinite;
         }
@@ -280,7 +289,7 @@
                 </section>
                 <section>
                     <h2 class="secondary-header" style="text-decoration: underline;">Education</h2>
-                        <h3>University of California, San Diego: San Diego, CA</h3>
+                        <h3><em>University of California, San Diego: San Diego, CA</em></h3>
                             <h4 class="sans-font">
                                 Bachelor of Science in Computer Science Expected Graduation: June 2022
                             </h4>
@@ -289,7 +298,7 @@
                                     <li>Provost Honors: Winter (2019), Spring (2019), Fall (2019), Winter (2020)</li>
                                 </ul>
     
-                            <h4>
+                            <h4 class="sans-font">
                                 Relevant Coursework: 
                             </h4>
                                 <ul>
@@ -308,31 +317,17 @@
                 </p>
     
                 <section>
-                    <h2 class="secondary-header" style="text-decoration: underline;">Skills</h2>
-                    <table class="center-horizontal" style="width: 100%;">
-     
-                        <tr>
-                            <th>Proficient in:</th>
-                            <th>Basic Undertanding of:</th>
-                        </tr>
-                        <tr>
-                            <td>C++</td>
-                            <td>HTML</td>
-                        </tr>
-                        <tr>
-                            <td>Java</td>
-                            <td>CSS</td>
-                        </tr>
-                        <tr>
-                            <td>Python</td>
-                            <td>PHP</td>
-                        </tr>
-                        <tr>
-                            <td>C</td>
-                            <td>HTML</td>
-                        </tr>
-    
-                    </table>
+                    <h2 class="secondary-header" style="text-decoration: underline;">Technical Skills</h2>
+                    <div class="skills-grid">
+                        <label for="c++">C++ </label><input disabled type="range" value="80" >
+                        <label for="c++">Python </label><input disabled type="range" value="70">
+                        <label for="c++">C </label><input disabled type="range" value="65">
+                        <label for="c++">Java </label><input disabled type="range" value="60">
+                        <label for="c++">HTML </label><input disabled type="range" value="55">
+                        <label for="c++">CSS </label><input disabled type="range" value="50">
+                        <label for="c++">JavaScript </label><input disabled type="range" value="35">
+
+                    </div>
                 </section>
 
             </div>
@@ -413,8 +408,8 @@
                 <p>
                     I'd love to connect with you, too.
                 </p>
-                <a href="https://www.facebook.com"><img width="50" height="50" src="/images/fbicon.png" alt="facebook"></a>
-                <a href="https://www.github.com"><img width="50" height="50" src="/images/ghicon.png" alt="github"></a>
+                <a href="https://www.facebook.com/c2222222"><img width="50" height="50" src="/images/fbicon.png" alt="facebook"></a>
+                <a href="https://www.github.com/sthk206"><img width="50" height="50" src="/images/ghicon.png" alt="github"></a>
                 <!-- <form action="mailto:sthk206@gmail.com">
                     <label for="name">Name:</label>
                     <input id="name" type="text">
