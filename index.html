@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Si Thu Kaung Set's Portfolio Website">
     <title>Si Thu Kaung Set's Website</title>
+    
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172046374-1"></script>
@@ -31,15 +32,25 @@
             font-family: "Nunito";
             src: url(font/NunitoSans-BoldItalic.ttf);
         }
+        @font-face {
+            font-family: Josefin;
+            src: url(font/Josefin_Sans/static/JosefinSans-SemiBold.ttf);
+        }
 
         footer{
             padding-top: 10px;
         }
 
+        html{
+            scroll-behavior: smooth;
+        }
         header{
             padding: 26.5%;
         }
-        
+        header#top{
+            background-image: url(./images/bg4.jpeg);
+            background-size: 100%;
+        }
         hr{
             margin:0;
         }
@@ -107,7 +118,7 @@
             margin-bottom: auto;
         } */
         .main-header{
-            font-family: Lex, Impact, Haettenschweiler;
+            font-family: Lex , Impact, Haettenschweiler;
         }
         .hover-toggle:hover{
             animation: toggle 3s infinite;
@@ -119,9 +130,9 @@
         }
         .hover-bg:hover{
 
-            /* color: rgb(255, 255, 255);
-            text-shadow: 2px 2px 5px black; */
-            border-right: 7px solid black;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 5px black;
+            /* border-right: 7px solid black; */
             
         }
         .intro{
@@ -137,13 +148,13 @@
 
         em#myname{
             font-weight: bold;
-            color:rgb(51, 172, 51);
+            color:rgb(116, 116, 114);
             animation:color-change 2s infinite;
         }
         @keyframes color-change {
-            0%   {color: rgb(51, 172, 51);}
+            0%   {color: rgb(116, 116, 114);}
             50%  {color: black;}
-            100% {color: rgb(51, 172, 51);}
+            100% {color: rgb(116, 116, 114);}
         }
 
         /*for tablets and laptops/desktops*/
@@ -213,6 +224,7 @@
         @media screen and (max-width: 820px) {
             #fullscreen-intro{
                 margin-top: 100%;
+
             }
             header{
                 height: 80vh;
@@ -283,10 +295,11 @@
                 <section>
                     <h2 style="text-align: center;" class="secondary-header">Who am I?</h2>
                     <div>
-                        <img width="250" height="250" class="center-horizontal" src="images/portrait.jpg" alt="portrait">
+                        <img style="margin-top: 50px;" width="250" height="250" class="center-horizontal" src="images/portrait.jpg" alt="portrait">
                         
                     </div>
                 </section>
+                
                 <section>
                     <h2 class="secondary-header" style="text-decoration: underline;">Education</h2>
                         <h3><em>University of California, San Diego: San Diego, CA</em></h3>
@@ -294,7 +307,7 @@
                                 Bachelor of Science in Computer Science Expected Graduation: June 2022
                             </h4>
                                 <ul>
-                                    <li>GPA: 3.888</li>
+                                    <li>Major GPA: 3.94 / 4.0</li>
                                     <li>Provost Honors: Winter (2019), Spring (2019), Fall (2019), Winter (2020)</li>
                                 </ul>
     
@@ -302,7 +315,7 @@
                                 Relevant Coursework: 
                             </h4>
                                 <ul>
-                                    <li>Advanced Data Structures</li>
+                                    <li>Advanced Data Structures and Algorithms</li>
                                     <li>Theory of Computation</li>
                                     <li>Computer Organization and Systems Programming</li>
                                     <li>Component and Design Technology/ Digital Systems</li>
@@ -313,7 +326,7 @@
                 </section>
      
                 <p class="center-horizontal intro" style="width: 300px;">
-                    My name's Si Thu Kaung Set. I was born in Yangon, Myanmar. Currently, I'm a second year computer-science major at UCSD. 
+                    My name's Si Thu Kaung Set. I was born in Yangon, Myanmar. Currently, I'm a third year computer-science major at UCSD. 
                 </p>
     
                 <section>
@@ -342,14 +355,14 @@
                 <h2 class="secondary-header"> System Energy Efficiency Lab: San Diego, CA</h2>
                 <h3 class="sans-font"> Research Assistant: Jan. 2020 – Present</h3>
                 <ul>
-                    <li>Conducted research alongside a postgraduate student with research in more efficient machine learning through brain-inspired hyperdimensional computing.</li>
-                    <li>Applied Python and command-line argument parsing to test and analyze various encoding algorithms such as locality-based sparse projection for hardware implementation.</li>
+                    <li>Conducted research alongside a postgraduate student regarding more efficient machine learning through brain-inspired hyperdimensional computing.</li>
+                    <li>Utilized Python scripts (Numpy, Scipy, Scikit-learn, Matplotlib) to develop unit test case scenarios for hardware implementation of various encoding algorithms such as locality-based sparse projection.</li>
                 </ul>
             </section>
         
             <section>
                 <h2 class="secondary-header"> Design for Development (ENG 100D) – UCSD OSD Accessibility Map: San Diego, CA</h2>
-                <h3 class="sans-font"> Team Member: Sept. 2019 – Dec. 2019</h3>
+                <h3 class="sans-font"> Prototype Enginner: Sept. 2019 – Dec. 2019</h3>
                 <ul>
                     <li>Collaborated with four team members to construct a system consisting of a 3D Tactile Map and a remote speaker system for visually impaired and blind individuals on campus.</li>
                     <li>Researched extensively and prototyped a 3D deliverable representing a portion of the camp to be presented to UCSD’s Resources of Management and Planning.</li>
@@ -360,8 +373,8 @@
                 <h2 class="secondary-header"> Enterstem Co., Ltd: Yangon, Myanmar</h2>
                 <h3 class="sans-font"> Web Developer Intern: July 2019 – Sept. 2019</h3>
                 <ul>
-                    <li>Utilized pure PHP to create a website for hotel search engine with features including a filtering system and Create, Read, Update, and Delete functions.</li>
-                    <li>Registered data into database and verified accuracy.</li>
+                    <li>Employed HTML, CSS, and PHP to design a search engine capable of parsing through over 200 local hotels in Yangon.</li>
+                    <li>Implemented full stack functionalities alongside a filtering system based on ratings, location, and payment options.</li>
                 </ul>
             </section>
         </section>
