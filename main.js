@@ -40,6 +40,22 @@ window.addEventListener('DOMContentLoaded', function(){
     });
 
 })
+var i = 0;
+var txt = "Hi! I'm  Si Thu, an aspiring software developer.";
+var type = '<em id="myname">|</em>';
+var speed = 50; 
+
+function typeW(){
+  if (i < txt.length) {
+    document.getElementById("fullscreen-intro").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeW, speed);
+  }
+  else{
+    document.getElementById("fullscreen-intro").innerHTML += type;
+  }
+}
+window.onload=typeW();
 
 
 

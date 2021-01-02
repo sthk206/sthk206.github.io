@@ -57,6 +57,7 @@
         
         h1{
             text-align: center;
+            font-size: 28px;
             /* font-family: OpenSans; */
         }
 
@@ -146,7 +147,7 @@
 
 
 
-        em#myname{
+        /* #myname{
             font-weight: bold;
             color:rgb(116, 116, 114);
             animation:color-change 2s infinite;
@@ -155,7 +156,20 @@
             0%   {color: rgb(116, 116, 114);}
             50%  {color: black;}
             100% {color: rgb(116, 116, 114);}
+        } */
+
+        #myname{
+            font-weight: bold;
+            font-style: normal;
+            color:black;
+            animation:color-change 1s infinite;
         }
+        @keyframes color-change {
+            0%   {opacity: 100%;}
+            50%  {opacity: 0;}
+
+        }
+
 
         /*for tablets and laptops/desktops*/
         @media screen and (min-width: 821px) {
@@ -270,9 +284,12 @@
 </head>
 <body>
     <header id="top">
+
         <h1 id="fullscreen-intro">
-            Hi! I'm <em id="myname"> Si Thu</em>. I'm a student developer.
+            <!-- Hi! I'm <em id="myname"> Si Thu</em>, an aspiring software developer. -->
+
         </h1>
+
         <nav class="sidebar" id="main-nav">
             <ul class="no-bullet">
                 <li><a class="hover-bg" href="#about-section">About Me</a></li>
@@ -325,8 +342,8 @@
     
                 </section>
      
-                <p class="center-horizontal intro" style="width: 300px;">
-                    My name's Si Thu Kaung Set. I was born in Yangon, Myanmar. Currently, I'm a third year computer-science major at UCSD. 
+                <p class="center-horizontal intro" style="width: 400px;">
+                    My name's Si Thu Kaung Set. I was born in Yangon, Myanmar. Currently, I am a third year computer-science major at UCSD and in search of internship opportunities for Summer 2021. I love a challenge, and I am constantly seeking opportunities for professional and technical growth.
                 </p>
     
                 <section>
@@ -334,11 +351,11 @@
                     <div class="skills-grid">
                         <label for="c++">C++ </label><input disabled type="range" value="80" >
                         <label for="c++">Python </label><input disabled type="range" value="70">
-                        <label for="c++">C </label><input disabled type="range" value="65">
-                        <label for="c++">Java </label><input disabled type="range" value="60">
-                        <label for="c++">HTML </label><input disabled type="range" value="55">
-                        <label for="c++">CSS </label><input disabled type="range" value="50">
-                        <label for="c++">JavaScript </label><input disabled type="range" value="35">
+                        <label for="c++">JavaScript </label><input disabled type="range" value="70">
+                        <label for="c++">HTML </label><input disabled type="range" value="65">
+                        <label for="c++">CSS </label><input disabled type="range" value="65">
+                        <label for="c++">C </label><input disabled type="range" value="60">
+                        <label for="c++">Java </label><input disabled type="range" value="55">
 
                     </div>
                 </section>
@@ -401,7 +418,7 @@
                 <h2 class="secondary-header">Help Portrait</h2>
                 <div class="volunteer-grid">
                     <img height="300" width="500" src="/images/helpportrait.jpg" alt="helpportrait">
-                    <p class="center-vertical">Help Portrait is a global movement to give back to the community by offering portraits of individuals and families. I was part of the outreach team that reached out to households in the community to invite them to the event, and I also helped families prepare for their photographs. Help Portrait has been an especially meaningful experience, as many of the families I interacted with could not even afford a family portrait.</p>
+                    <p class="center-vertical">Help Portrait is a global movement to give back to the community by offering portraits of individuals and families. I was part of the outreach team that reached out to households in the community to invite them to the event, and I also helped families prepare for their photographs. Having seen the smiles on the faces of fathers and mothers who received their first family portraits, Help Portrait has been an especially meaningful experience.</p>
                 </div>
             </section>
         </section>
