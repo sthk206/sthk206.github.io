@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: normal;
 }
 h1{
-    font-size: 45px;
+    font-size: 40px;
 }
 h2{
     font-size: 30px;
@@ -54,7 +54,7 @@ h3{
 .landingflex-2{
     flex-grow: 1;
     padding-left: 20%;
-    animation:fade-in 6s;
+    animation:fade-in 7s;
 
 }
 @keyframes fade-in {
@@ -67,6 +67,9 @@ h3{
 
 #fullscreen-intro{
     
+}
+.landingflex-1>h1{
+    display: inline;
 }
 
 #myname{
@@ -237,6 +240,7 @@ h3{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 .resume{
     color: white;
@@ -311,3 +315,8 @@ h3{
         order: -1;
     }
 }
+/* footer{
+    margin: 50px 0 25px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+} */
