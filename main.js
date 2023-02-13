@@ -43,3 +43,43 @@ function typeW(){
 
 }
 window.onload= setTimeout(typeW, 800); 
+
+
+const filters = document.querySelectorAll(".filter");
+const items = document.querySelectorAll(".project-placard");
+
+filters.forEach(filter => {
+  filter.addEventListener("click", () => {
+    const category = filter.dataset.category;
+    if (category === "all") {
+      items.forEach(item => {
+        item.style.display = "grid";
+        item.style.opacity = 1;
+      });
+    } else {
+      items.forEach(item => {
+        if (item.classList.contains(category)) {
+          item.style.display = "grid";
+          item.style.opacity = 1;
+        } else {
+          item.style.display = "none";
+          item.style.opacity = 0;
+        }
+      });
+    }
+  });
+});
+filters.forEach(filter => {
+  filter.addEventListener('click', ()=>{
+    filters.forEach(i =>{
+      if(i===filter){
+        if (!i.classList.contains('active')) i.classList.add('active');
+      } else {
+        if (i.classList.contains('active')) i.classList.remove('active');
+      }
+    })
+
+  })
+
+});
+document.querySelector('.projects-filters .filter').classList.add('active');

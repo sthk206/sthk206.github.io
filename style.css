@@ -1,3 +1,4 @@
+/* GLOBAL*/
 :root {
     --purple-bg: #5E548E;
     --dred-bg: #8E5454;
@@ -38,6 +39,9 @@ h3{
     min-height: 50%; 
 }
 
+
+
+/* LANDING PAGE */
 .landingscreen{
 
     background-color: var(--purple-bg);
@@ -63,11 +67,6 @@ h3{
     100%  {opacity: 100%;}
 
 }
-
-
-#fullscreen-intro{
-    
-}
 .landingflex-1>h1{
     display: inline;
 }
@@ -81,6 +80,23 @@ h3{
     50%  {opacity: 0;}
 
 }
+@media screen and (max-width: 1150px) {
+    .landingflex-2 svg{
+        display: none;
+    }
+    .landingscreen{
+        grid-template-columns: 1fr;  
+    }
+    .landingflex-1{
+        padding-left: 10%;
+    }
+    .landingflex-2{
+        position: absolute;
+    }
+}
+/* END OF LANDING PAGE */
+
+/* ABOUT  */
 
 @media screen and (min-width: 1150px) {
     .aboutpage{
@@ -138,14 +154,31 @@ h3{
     padding-left: 25px;
 
 }
+@media screen and (max-width: 1150px) {
 
+    .aboutpage{
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .abt{
+        order: -1;
+        background-color: white;
+    }
+    .skills{
+        background-color: var(--white-bg);
+        height: fit-content;
+    }
 
+}
+/* END OF ABOUT  */
+
+/* PROJECTS */
 .projects{
     display: grid;
     padding: 100px 0;
     justify-items: center;
     align-items: center;
-    /* grid-template-rows: 1fr; */
+    grid-template-rows: 1fr;
 }
 .project-title{
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
@@ -160,16 +193,20 @@ h3{
 .project-title>h1{
     margin: 0;
 }
+.project-placards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+
+}
 .project-placard{
-    margin-top: 100px;
-    min-width: 678px;
-    min-height: 362px;
+    min-width: 400px;
+    min-height: 70vh;
+    max-height: 600px;
 
-    width: 65vw;
+    width: 20vw;
     height: 35vw;
-
-
-
 
     background: white;
     /* background: #F8F8F8; */
@@ -177,34 +214,46 @@ h3{
     border-radius: 20px;
 
     display: grid;
+    grid-template-rows: 230px 2fr;
     overflow: hidden;
     align-items: center;
     justify-items: center;
     
 }
-
 .project-placard>img{
-    width: 80%;
+    width: 230px;
+}
+.project-placard>div{
+    justify-self: start;
+    align-self: flex-start;
+    padding-left: 10%;
 }
 
 
-@media screen and (min-width: 700px) {
-    .odd{
-        grid-template-columns: 3fr 2fr;
+@media screen and (max-width: 1300px) {
+    .project-placards{
+        grid-template-columns: 1fr 1fr;
     }
-    .even{
-        grid-template-columns: 2fr 3fr;
-    }
-    .odd>div{
-        justify-self: start;
-        padding-right: 20%;
-    }
-    .even>div{
-        padding-left: 20%;
-        justify-self: end;
-        text-align: end;
-    }
+
+    
 }
+@media screen and (max-width: 700px) {
+    .project-placards{
+        grid-template-columns: none;
+        grid-template-rows: 1fr auto;
+    }
+    .project-title{
+        width: 75vw;
+        height: 100px;
+    }
+
+    .project-placard{
+        width: 65vw;
+        height: 35vw;
+    }
+    
+}
+/* END OF PROJECTS */
 
 
 @media screen and (min-width: 1150px) {
@@ -214,24 +263,7 @@ h3{
     }
 }
 
-.volunteer-title{
-    background-color: var(--black-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.volunteer-title > h1{
-    color: white;
-
-
-    font-style: normal;
-    font-weight: normal;
-    font-size: 45px;
-    line-height: 34px;
-    text-align: center;
-
-}
-
+/* CONTACT */
 .contact{
     color: white;
     font-size: 20px;
@@ -259,64 +291,30 @@ h3{
     border-top: 1px solid rgba(255, 255, 255, 1);
 }
 
-@media screen and (max-width: 1150px) {
-    svg{
-        display: none;
-    }
-    .landingscreen{
-        grid-template-columns: 1fr;  
-    }
-    .landingflex-1{
-        padding-left: 10%;
-    }
-    .landingflex-2{
-        position: absolute;
-    }
-    .aboutpage{
-        display: grid;
-        grid-template-rows: 1fr auto;
-    }
-    .abt{
-        order: -1;
-        background-color: white;
-    }
-    .skills{
-        background-color: var(--white-bg);
-        height: fit-content;
-    }
 
-}
-@media screen and (max-width: 700px) {
+/* END OF CONTACT */
 
-    .project-title{
-        width: 75vw;
-        height: 100px;
-    }
-
-    .project-placard{
-        min-width: 90%;
-        min-height: 80vh;
-    }
-    
-    .project-placard>img{
-        width: 70%;
-    }
-    
-    .odd, .even{
-        grid-template-rows: 1fr 1fr;
-    }
-
-    .odd>div, .even>div{
-        justify-self: start;
-        align-self: flex-start;
-        padding-left: 10%;
-    }
-    .even>img{
-        order: -1;
-    }
-}
 /* footer{
     margin: 50px 0 25px;
     color: rgb(255, 255, 255);
     font-size: 15px;
 } */
+
+.projects-filters{
+    margin-top: 50px;
+    display: flex;
+    width: 800px;
+    justify-content: space-evenly;
+}
+.projects-filters > h3{
+    width: 20%;
+    text-align: center;
+}
+.projects-filters > h3:hover{
+    cursor: pointer;
+}
+
+.active{
+    background-color: #5E548E;
+    color: white;
+}
