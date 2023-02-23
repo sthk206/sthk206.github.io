@@ -125,7 +125,7 @@ h3{
     padding-left: 25px;
 }
 .skills > ul, .education > ul{
-    list-style-type: none;
+    list-style-type: circle;
     font-size: 25px;
     line-height: 45px;
 
@@ -278,7 +278,7 @@ h3{
     }
 }
 
-/* CONTACT */
+/* CONTACTS */
 .contact{
     color: white;
     font-size: 20px;
@@ -290,6 +290,9 @@ h3{
     padding: 10vh 0;
     flex-direction: column;
     text-align: center;
+}
+.contact h3{
+    margin: 30px 0;
 }
 .resume{
     color: white;
