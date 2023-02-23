@@ -1,0 +1,90 @@
+[
+
+    {
+        "name": "Pixley's Oddities",
+        "image": "./images/pixley.png",
+        "tech": ["Figma"],
+        "type": "design",
+        "desc": "Helped a local queer tattoo/taxidermy shop redesign their website through brand consultation, user interviews, competitive analysis, wireframing and prototyping.",
+        "source": "https://www.figma.com/file/pQnHVTXtqNjU6KqncHPCFv/High-fi-prototype?node-id=230%3A2359&t=svqkSiIbe8GW5GPN-1"
+        
+    },
+    {
+        "name": "Habit Tracker",
+        "image": "./images/project-habittracker.jpg",
+        "tech": ["Figma"],
+        "type": "design",
+        "desc": "Designed a minimalistic application that helps motivate users create and maintain positive habit changes.",
+        "source": "",
+        "comment": true
+        
+    },
+    {
+        "name": "Jacqueminot",
+        "image": "./images/jack2.png",
+        "tech": ["React", "Node.js", "MongoDB", "Express"],
+        "type": "web",
+        "desc": "Developed the front-end of an exclusive web application that facilitates interaction between Theta Tau actives and alumni.",
+        "source": "https://github.com/sthk206/Jacqueminot"
+        
+    },
+    {
+        "name": "raiseyouraura",
+        "image": "./images/raise.png",
+        "tech": ["Liquid", "HTML/CSS", "Shopify"],
+        "type": "web",
+        "desc": "Assisted a client in migrating their online store to Shopify and customized the theme to meet preferential standards.",
+        "source": "https://github.com/sthk206/raiseyouraura-shopify"
+        
+    },
+    {
+        "name": "Yelp Sustainability",
+        "image": "./images/yelp.png",
+        "tech": ["Figma"],
+        "type": "design",
+        "desc": "Created a Yelp case study to help customers find reliable methods of supporting businesses utilizing sustainable practices.",
+        "source": "https://medium.com/@sthk206/yelp-sustainability-a-ux-case-study-5899a9bc7553"
+        
+    },
+
+
+    {
+        "name": "recipe-gains",
+        "image": "./images/recipe.png",
+        "tech": ["Figma", "React"],
+        "type": "web",
+        "desc": "Designed and developed a web application browse and search for meal recipes from a public API.",
+        "source": "https://github.com/sthk206/recipe-gains"
+        
+    },
+    
+    {
+        "name": "dalyplanner",
+        "image": "./images/daly.png",
+        "tech": ["Figma", "React", "Node.js", "Flask"],
+        "type": "web",
+        "desc": "Designed and devloped a web application that helps the user reflect on and break down goals into managable pieces.",
+        "source": "https://github.com/sthk206/dalyplanner"
+        
+    },
+
+
+    {
+        "name": "organelle",
+        "image": "./images/organelle.svg",
+        "tech": ["React", "Node.js", "MongoDB", "Express"],
+        "type": "web",
+        "desc": "Collaborated with team to develop a web application that helps college students organize coursework and deadlines.",
+        "source": "https://github.com/sthk206/organelle"
+        
+    },
+    {
+        "name": "Todoist Redesign",
+        "image": "./images/project-todoist.png",
+        "tech": ["Figma"],
+        "type": "design",
+        "desc": "Redesigned Todoist, a mobile/web application aimed towards better organization, to be more intuitive and customizable.",
+        "source": "todoist.pdf"
+        
+    }
+]
