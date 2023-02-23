@@ -70,11 +70,11 @@ fetch('./data/projects.json')
         project.source.includes('.pdf')?  
         `<a onclick="openpdf(event)" data-file="${project.source}">Case Study</a>`:
         project.source.includes('figma.com') ?  
-        `<a href=${project.source}">Figma</a>`:
+        `<a href="${project.source}">Figma</a>`:
         project.source.includes('medium.com') ?  
-        `<a href=${project.source}">Medium</a>`:
+        `<a href="${project.source}">Medium</a>`:
         project.source.includes('github.com') ?  
-        `<a href=${project.source}">Github</a>`:
+        `<a href="${project.source}">Github</a>`:
         `<h4>Source: <a href=${project.source}>${project.source}</a></h4>` 
 
       // +
