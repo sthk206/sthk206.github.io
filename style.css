@@ -53,13 +53,13 @@ h3{
     background-color: var(--purple-bg);
     color: white;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
 }
 .landingflex-1{
     flex-grow: 1;
-    padding-left: 30%;
+    padding: 0 15%;
 }
 .landingflex-2{
     flex-grow: 1;
@@ -90,9 +90,7 @@ h3{
     .landingflex-2 svg{
         display: none;
     }
-    .landingscreen{
-        grid-template-columns: 1fr;  
-    }
+
     .landingflex-1{
         padding-left: 10%;
     }
@@ -173,6 +171,12 @@ h3{
     .skills{
         background-color: var(--white-bg);
         height: fit-content;
+    }
+    .landingflex-1{
+        padding: 0 5%;
+    }
+    .abt > h3{
+        padding: 0 5%;
     }
 
 }

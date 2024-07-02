@@ -1,5 +1,5 @@
 var i = 0;
-var txt = "Hi, My name is Si Thu.I'm an aspiring frontend developer with great interest in design.";
+var txt = "Hi, My name is Si Thu.I'm a frontend developer with a passion for building simple and effective software solutions.";
 var speed = 50; 
 var pCount = 0;
 
